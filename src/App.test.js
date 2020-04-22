@@ -9,6 +9,10 @@ test("renders learn react link", () => {
 });
 
 // The application will display a grid of all the numbers from 1 to 144
+test("renders all numbers", () => {
+  let wrapper = shallow(<App />);
+  expect(wrapper.find('button').length).toEqual(144);
+});
 
 // When the child clicks a box then all the numbers which are a multiple of that number should be highlighted in some way.
 
