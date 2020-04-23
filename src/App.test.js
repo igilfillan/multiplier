@@ -1,12 +1,10 @@
 import React from "react";
-import { render } from "@testing-library/react";
 import { shallow } from "enzyme";
+import NumberGrid from "./NumberGrid";
 
 import App from "./App";
-test("renders learn react link", () => {
+test("renders a  NumberGrid", () => {
     let wrapper = shallow(<App />);
-    expect(wrapper.find('h2').text()).toEqual('Multiplier');
+    expect(wrapper.find(NumberGrid).length).toEqual(1);
 });
 
-
-// Clicking a second time on a previously highlighted number should remove all highlighting from numbers that are multiples of the number that is clicked.
