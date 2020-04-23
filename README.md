@@ -22,6 +22,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 In order to work quickly I decided to use 
 create-react-app to bootstrap the project and to use Enzyme for testing. 
 This helped save some time and showcase my React skills. 
+My code can be found in `multipier/src`
  
  ### Clarification on Acceptance Criteria
  For this AC: "Clicking a second time on a previously highlighted number should remove all highlighting from numbers that are multiples of the number that is clicked." 
