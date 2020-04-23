@@ -2,13 +2,12 @@ body {
   margin: 1em;
   background-color: darkslategrey;
   max-width: 1300px;
-
   font-family: Verdana, Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 1300px) {
+@media only screen and (min-width: 1300px) {
   body {
     margin: 1em auto;
   }
