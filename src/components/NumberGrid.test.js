@@ -2,11 +2,12 @@ import React from "react";
 import { mount, shallow } from "enzyme";
 import NumberGrid from "./NumberGrid";
 import NumberItem from "./NumberItem";
+import isMultiple from "../utilities/isMultiple";
 
-const getMultiples = (number, count) => {
+const getMultiples = (selectedNumber, count) => {
   let items = [];
   for (let i = 1; i <= count; i++) {
-    if (i % number === 0) {
+    if (isMultiple(i, selectedNumber)) {
       items.push(i);
     }
   }

@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import NumberItem from "./NumberItem";
+import isMultiple from "../utilities/isMultiple";
 
 const NumberGrid = ({ count }) => {
   const [selectedNumber, setSelectedNumber] = useState(null);
-
-  const isHighlighted = (number, selectedNumber) => {
-    return number % selectedNumber === 0 ? true : false;
-  };
 
   const numberClickHandler = number => {
     number === selectedNumber
@@ -19,7 +16,7 @@ const NumberGrid = ({ count }) => {
   for (let i = 1; i <= count; i++) {
     items.push(
       <NumberItem
-        isHighlighted={isHighlighted(i, selectedNumber)}
+        isHighlighted={isMultiple(i, selectedNumber)}
         value={i}
         clickHandler={numberClickHandler}
         key={i}
