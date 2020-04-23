@@ -4,7 +4,7 @@ import NumberGrid from "./NumberGrid";
 import NumberItem from "./NumberItem";
 import getMultiples from '../utilities/getMultiples'
 
-// The application will display a grid of all the numbers from 1 to maxNumber
+// The application will display a grid of all the numbers from 1 to 144
 test("renders all numbers", () => {
   const mockMaxNumber = 144;
   let wrapper = shallow(<NumberGrid maxNumber={mockMaxNumber} />);
