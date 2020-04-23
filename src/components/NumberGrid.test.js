@@ -2,17 +2,7 @@ import React from "react";
 import { mount, shallow } from "enzyme";
 import NumberGrid from "./NumberGrid";
 import NumberItem from "./NumberItem";
-import isMultiple from "../utilities/isMultiple";
-
-const getMultiples = (selectedNumber, count) => {
-  let items = [];
-  for (let i = 1; i <= count; i++) {
-    if (isMultiple(i, selectedNumber)) {
-      items.push(i);
-    }
-  }
-  return items;
-};
+import getMultiples from '../utilities/getMultiples'
 
 // The application will display a grid of all the numbers from 1 to 144
 test("renders all numbers", () => {
