@@ -17,3 +17,9 @@ test("highlights all numbers when #1 is clicked", () => {
 });
 
 // Clicking a second time on a previously highlighted number should remove all highlighting from numbers that are multiples of the number that is clicked.
+test("removes highlight class from all numbers when #1 is clicked twice", () => {
+    let wrapper = mount(<NumberGrid count={144} />);
+    wrapper.find(".number-1").simulate("click");
+    wrapper.find(".number-1").simulate("click");
+    expect(wrapper.find('.number--isHighlighted').length).toBe(0);
+});
