@@ -1,6 +1,6 @@
 import React from "react";
 import NumberGrid from "./NumberGrid";
 
-const App = () => <NumberGrid count={144} />;
+const App = () => <NumberGrid maxNumber={144} />;
 
 export default App;
